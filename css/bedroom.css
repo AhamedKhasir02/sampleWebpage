@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background: black;
+
+}
+header {
+    background: gold;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+    z-index: 1;
+}
+
+/* Neon Effect on Hover */
+.header:hover {
+    box-shadow: 0 0 15px 5px rgba(255, 217, 0, 0.984); /* Neon glow effect */
+}
+.header .logo img {
+    height: 50px;
+    width: auto;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.header .logo img:hover {
+    transform: scale(1.5); /* Scale effect on hover */
+    filter: brightness(1.5);
+    box-shadow: 0 0 10px 5px #D1B464;
+
+}
+
+/* Brand Name Styling */
+.header .brandName h2 {
+    font-size: 1rem;
+    color: #363434; /* Black text */
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: color 0.5s ease;
+    position:absolute;
+    top: 1.3rem;
+    left: 3rem;
+
+}
+
+.header .brandName:hover h2 {
+    
+    color: black; /* White text on hover */
+    text-shadow: 0 0 10px rgba(255, 217, 0, 0.882);
+    transform: scale(1.2); /* Scale effect on hover */
+    filter: brightness(1.5);
+}
+
+/* Right Side Icons */
+.header .headRight {
+    align-items: right;
+}
+
+.header .headRight a {
+    margin-left: 10px;
+    margin-right: 10px;
+    position: right;
+}
+
+.header .headRight img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    transition: transform 0.5s, filter 0.5s;
+    border: 2px solid #D1B464;
+}
+
+.header .headRight img:hover {
+    transform: scale(1.5);
+    filter: brightness(1.3); /* Brighten icons on hover */
+}
+
+/* Neon Lighting on Hover for Icons */
+.header .headRight img:hover {
+    box-shadow: 0 0 10px 5px #D1B464; /* Neon lighting effect */
+}
+
+/* Profile Icon Special Styling */
+.header .profile img {
+    border: 2px solid #D1B464; /* Gold border for the profile */
+    padding: 5px;
+}
+
+.left-sidebar {
+    display: block;
+    top: 3.5rem;
+    width: 200px;
+    position: fixed;
+    margin-left: 0; 
+    z-index:0 ;
+}
+/* Sidebar Styles */
+.left-sidebar .sidebar {
+    width: 250px;
+    background-color: #000;
+    color: #fff;
+    height: fit-content;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    transition: width 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Navigation Styles */
+.left-sidebar .sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.left-sidebar .sidebar-nav ul li {
+    position: relative;
+}
+
+.left-sidebar .sidebar-nav a {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #FFD700;
+    font-size: 1em;
+    border-bottom: 1px solid #222;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Design Class Styling */
+.left-sidebar .Design {
+    color: #000;
+    background-color: black;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Hover Effect for Sidebar Links */
+.left-sidebar .sidebar-nav a:hover {
+    background-color: #ffcc00;
+    color: #000;
+}
+
+/* Flyout Menu Styling */
+.left-sidebar .nav-flyout {
+    display: none;
+    background-color: #000;
+}
+
+.left-sidebar .sidebar-nav ul li:hover > .nav-flyout {
+    display: block;
+    position: relative;
+}
+
+.left-sidebar .nav-flyout li a {
+    padding: 12px 30px;
+    font-size: 0.9em;
+    background-color:gold;
+    color: black;
+    border-bottom: 1px solid #333;
+    transition: background-color 0.3s ease;
+}
+
+.left-sidebar .nav-flyout li a:hover {
+    background-color: black;
+    color: #FFD700;
+}
+
+/* Content Part*/
+
+.content {
+    
+    position: absolute;
+    top: 3.5rem;
+    height:fit-content ;
+    width:80%;
+    float: right;
+    left: 250px;
+
+}
+
+.content .design-list {
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+}
+
+.content .design {
+    display: inline-block;
+    height: 200px;
+    width: 25%;
+    margin: 2%;
+    padding: 2%;
+    
+    
+}
+
+.content .design:hover {
+    text-shadow: 0 0 10px black;
+    transform: scale(1.2); /* Scale effect on hover */
+    filter: brightness(1.3);
+   
+    
+}
+
+.content .design-list h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    text-align:center;
+    font-size: 50px;
+    color: gold;
+    filter:brightness(1);
+    border-bottom: 10px;
+}
+
+.content .design-list .design img {
+    
+    height: 200px;
+    width: 100%;
+    border-radius: 20%;
+    box-shadow: 20%;
+    transition: transform 0.3s;
+}
+
+.content .design-list .design img:hover {
+    box-shadow: 0 0 15px 5px gold;
+}
+.content .design-list .design h3 {
+    
+    background: goldenrod;
+    font-weight: 300;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    border-radius:15%;
+    
+}
+
+.content .design-list .design p {
+    background: wheat;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    border-radius: 10%;
+}
+
+.content .msg {
+    background: wheat;
+    text-align: center;
+}
+
+
+
+/* Footer Section*/
+.footerF {
+    
+    position: relative;
+    top: 50rem;
+    width: 100%;
+    
+    
+}
+
+/* Footer Styling */
+.footerF .footer {
+    background-color: #FFD700; /* Yellow background */
+    color: #000; /* Black text */
+    padding: 0; /* Remove padding that might cause overflow */
+    margin: 0;
+    overflow: hidden; /* Ensure no overflow or scrollbar */
+    height: fit-content;
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.footerF .footer .footer-top {
+    padding-top: 40px;
+    border-top: 4px solid #000; /* Black border at the top */
+}
+
+.footerF .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden; /* Ensure no overflow */
+    box-sizing: border-box; /* Prevent content overflow by including padding */
+    height:fit-content;
+}
+
+/* Footer Brand Section */
+.footerF .footer-brand {
+    flex-basis: 45%;
+    margin-bottom: 20px;
+}
+
+.footerF .footer-brand p {
+    margin-top: 20px;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333; /* Darker shade of black for better readability */
+}
+
+.footerF .footer-brand img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8); /* Black glow effect around logo */
+}
+
+/* Footer Navigation */
+.footer-nav {
+    margin-bottom: 0;
+    margin: 20px; /* Ensure no extra margin or padding */
+    padding: 0;
+    
+}
+
+.footer-list-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000; /* Black color for section titles */
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-list-title::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background-color: #000; /* Black line under titles */
+    left: 0;
+    bottom: 0;
+}
+
+.footer-list {
+    list-style: none;
+    padding-left: 0; /* Ensure no padding on list */
+}
+
+.footer-list li {
+    margin-bottom: 10px;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.btn{
+    float: right;
+    background-color: rgb(189, 215, 17);
+    border-radius: 15%;
+    margin: 0%;
+    padding: 5px;
+    border: #FFD700;
+    height:fit-content;
+    width:fit-content;
+    margin-right: 10px;
+}
+
+.footer-bottom{
+    margin-top: 20px;
+}
+
+
+
+.footer-link:hover {
+    color: #000; /* Keep black on hover */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8); /* Black glow effect on hover */
+}
