@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Simple username and password check
         if (usernameInput === validUsername && passwordInput === validPassword) {
             // Redirect to index.html if credentials are correct
-            window.location.href = "home.html";
+            window.location.href = "/home.html";
         } else {
             // Show error message if credentials are incorrect
             alert("Invalid username or password. Please try again.");
